@@ -2,6 +2,7 @@ from numpy import random
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
+import scipy.stats as stat
 import seaborn as sns
 
 # x = random.randint(100)
@@ -37,8 +38,7 @@ import seaborn as sns
 mean = 0
 std_dev = 1
 sample_size = 1000
-data = np.random.normal(mean, std_dev, sample_size)
-
+data = norm.rvs(size=1000)
 # Calculer la moyenne et l'écart-type des échantillons
 sample_mean = np.mean(data)
 sample_std_dev = np.std(data)
